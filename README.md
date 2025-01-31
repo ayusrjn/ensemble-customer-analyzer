@@ -85,5 +85,3 @@ streamlit run app1.py
 ## License
 MIT License
 
-## Contributors
-Ayush Ranjan
