@@ -1,4 +1,4 @@
-# Flipkart Review Sentiment Analyzer
+# RoBerta and DistillBert Based Advanced Abstract Based Sentiment Analysis App
 
 ## Overview
 An advanced sentiment analysis system trained on Flipkart product reviews, combining the power of RoBERTa and DistilBERT models in an ensemble approach. The system not only classifies sentiment but also extracts key aspects from negative reviews for better insights.
@@ -37,11 +37,11 @@ from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassifica
 from sentiment_analyzer import FlipkartAnalyzer
 
 # Load models from Hugging Face Hub
-roberta_model = AutoModelForSequenceClassification.from_pretrained("sohaibakhtar/flipkart-roberta")
-roberta_tokenizer = AutoTokenizer.from_pretrained("sohaibakhtar/flipkart-roberta")
+roberta_model = AutoModelForSequenceClassification.from_pretrained("ayusrjn/RoBerta-finetuned-flipkar-review")
+roberta_tokenizer = AutoTokenizer.from_pretrained("roberta-base")
 
-distilbert_model = AutoModelForSequenceClassification.from_pretrained("sohaibakhtar/flipkart-distilbert")
-distilbert_tokenizer = AutoTokenizer.from_pretrained("sohaibakhtar/flipkart-distilbert")
+distilbert_model = AutoModelForSequenceClassification.from_pretrained("ayusrjn/distillBert-finetuned-on-flipkart-reviews")
+distilbert_tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 ```
 
@@ -65,20 +65,22 @@ absa.py
 )
 # Download the model from Hugging Face "ayusrjn/setfit-absa/setfit-absa-model-aspect" and "ayusrjn/setfit-absa/setfit-absa-model-aspect"
 
+ ```
 
-
-# Example File
+## Example File
 example.csv
+
+
+## Installation
+```bash
+pip install -r requirements.txt
+```
 
 ## Running
 ```bash
 streamlit run app1.py
 ```
 
-## Installation
-```bash
-pip install -r requirements.txt
-```
 
 ## License
 MIT License
