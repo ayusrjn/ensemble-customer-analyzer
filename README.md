@@ -11,8 +11,11 @@ An advanced sentiment analysis system trained on Flipkart product reviews, combi
 ![Results Page](assets/results.png)
 *Detailed analysis results with sentiment breakdown*
 
-![Abstract Based Results](assets/upload.png)
+![Abstract Based Results](assets/absa.png)
 *Extracts the context of the reviews*
+
+![Confidence](assets/upload.png)
+*gives confidence of the model*
 
 ## Features
 - **Ensemble Model Architecture**
